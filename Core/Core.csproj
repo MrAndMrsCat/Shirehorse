@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -12,6 +12,15 @@
     <Authors>Alex Messenger</Authors>
     <Company />
     <Description>Finite state machine template, misc class extensions and code snippets.</Description>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>Alex Messenger (c) 2022</Copyright>
+    <PackageIcon>shirehorse128.png</PackageIcon>
+    <RepositoryUrl>https://github.com/MrAndMrsCat/Shirehorse/tree/master/Core</RepositoryUrl>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\shirehorse128.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
 
 </Project>
