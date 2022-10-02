@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <OutputType>Library</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Shirehorse.Windows</AssemblyName>
+    <RootNamespace>Shirehorse.Windows</RootNamespace>
+    <Title>Shirehorse.Windows</Title>
+    <Version>0.1</Version>
+    <Authors>Alex Messenger</Authors>
+    <Company />
+    <Description>User controls and useful .dll imports for windows desktop applications.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+</Project>

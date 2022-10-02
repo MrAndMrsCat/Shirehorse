@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <AssemblyName>Shirehorse.Core</AssemblyName>
+    <RootNamespace>Shirehorse.Core</RootNamespace>
+    <Title>Shirehorse.Core</Title>
+    <Version>0.1</Version>
+    <Authors>Alex Messenger</Authors>
+    <Company />
+    <Description>Finite state machine template, misc class extensions and code snippets.</Description>
+  </PropertyGroup>
+
+</Project>
