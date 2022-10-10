@@ -8,7 +8,7 @@
     <AssemblyName>Shirehorse.Core</AssemblyName>
     <RootNamespace>Shirehorse.Core</RootNamespace>
     <Title>Shirehorse.Core</Title>
-    <Version>0.2</Version>
+    <Version>0.2.2</Version>
     <Authors>Alex Messenger</Authors>
     <Company />
     <Description>Finite state machine template, misc class extensions and code snippets.</Description>

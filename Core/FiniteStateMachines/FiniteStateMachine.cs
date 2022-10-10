@@ -4,6 +4,7 @@ using static Shirehorse.Core.FiniteStateMachines.IStateMachine;
 using System.ComponentModel;
 using System.Collections.Concurrent;
 using System.Diagnostics;
+using System;
 
 namespace Shirehorse.Core.FiniteStateMachines
 {
@@ -179,7 +180,17 @@ namespace Shirehorse.Core.FiniteStateMachines
             // Do nothing if the state is the same
             if (CurrentState.Equals(newState))
             {
-                Log($"{newState} - already set, no actions performed");
+                if (StateActions[CurrentState].HasTimeout)
+                {
+                    Log($"{newState} - reset timeout");
+                    _pollingTimer?.Stop();
+                    _pollingTimer?.Start();
+                }
+                else
+                {
+                    Log($"{newState} - already set, no actions performed");
+                }
+
                 return;
             }
 
@@ -378,6 +389,7 @@ namespace Shirehorse.Core.FiniteStateMachines
             /// <param name="timeoutState"> When timeout elapses, go to this state. </param>
             public StateAction(int timeout, TStates timeoutState) 
             {
+                HasTimeout = true;
                 PollingFunction = new Func<bool>(() => { return true; });
                 PollingInterval = timeout;
                 PollingCompleteState = timeoutState;
@@ -395,6 +407,7 @@ namespace Shirehorse.Core.FiniteStateMachines
             public Action<object>? EntryActionWithParameter { get; set; }
             public Action? ExitAction { get; set; }
             //public Action<object>? ExitActionWithParameter { get; set; } // doubt this would be useful?
+            public bool HasTimeout { get; private set; }
         }
 
 
