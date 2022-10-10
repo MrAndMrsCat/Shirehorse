@@ -11,7 +11,7 @@
     <AssemblyName>Shirehorse.Windows</AssemblyName>
     <RootNamespace>Shirehorse.Windows</RootNamespace>
     <Title>Shirehorse.Windows</Title>
-    <Version>0.1</Version>
+    <Version>0.2</Version>
     <Authors>Alex Messenger</Authors>
     <Company />
     <Description>User controls and useful .dll imports for windows desktop applications.</Description>
@@ -20,6 +20,7 @@
     <PackageIcon>shirehorse128.png</PackageIcon>
     <RepositoryUrl>https://github.com/MrAndMrsCat/Shirehorse/tree/master/Windows</RepositoryUrl>
     <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/MrAndMrsCat/Shirehorse</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

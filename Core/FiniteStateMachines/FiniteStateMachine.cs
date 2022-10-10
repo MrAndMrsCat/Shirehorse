@@ -311,13 +311,13 @@ namespace Shirehorse.Core.FiniteStateMachines
 
 
         public event EventHandler? StateChangedNamed;
-        public event EventHandler? StateChanged;
+        public event EventHandler<FSMEventArgs>? StateChanged;
         private void OnStateChanged() 
         {
             if (LoggingLevel.HasFlag(LogLevel.StateChange)) Log($"{CurrentState}");
 
             StateChanged?.Invoke(this, new FSMEventArgs(CurrentState));
-            StateChangedNamed?.Invoke(this, new EventArgs());
+            StateChangedNamed?.Invoke(this, EventArgs.Empty);
         } 
 
 
